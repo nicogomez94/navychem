@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071b32" />
+    <meta name="description" content="Navychem S.A. Soluciones para la operación marítima: químicos navales, limpieza, tratamiento de aguas y equipamiento. Buenos Aires, Argentina." />
+    <meta property="og:title" content="Navychem — Soluciones para cada travesía" />
+    <meta property="og:description" content="Productos y soluciones para el trabajo en el mar." />
+    <title>Navychem — Soluciones para cada travesía</title>
+    <link rel="icon" href="assets/navychem-logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Navychem, ir al inicio">
+        <img src="assets/navychem-logo.png" alt="Navychem" />
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#nosotros">NOSOTROS</a>
+        <a href="#soluciones">SOLUCIONES</a>
+        <a href="#productos">PRODUCTOS</a>
+        <a class="nav-contact" href="#contacto">CONTACTO <span>↗</span></a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden>
+      <a href="#nosotros">NOSOTROS</a>
+      <a href="#soluciones">SOLUCIONES</a>
+      <a href="#productos">PRODUCTOS</a>
+      <a href="#contacto">CONTACTO</a>
+    </nav>
+
+    <main>
+      <section class="hero" id="inicio" aria-label="Presentación de Navychem">
+        <div class="hero__copy">
+          <div class="hero__eyebrow"><span>INDUSTRIA MARÍTIMA / ARGENTINA</span><span>DESDE BUENOS AIRES</span></div>
+          <div class="hero__headline-wrap">
+            <p class="hero__pretitle">PARA LOS DESAFÍOS DE CADA PUERTO</p>
+            <h1>EL MAR<br />NOS <em>MUEVE.</em></h1>
+            <p class="hero__description">Químicos navales, equipamiento y soluciones para acompañar cada operación a bordo.</p>
+            <a class="button button--orange" href="#soluciones">EXPLORAR SOLUCIONES <span>↗</span></a>
+          </div>
+          <div class="hero__foot">
+            <span>01 / 02 &nbsp; UNA NUEVA DIRECCIÓN</span>
+            <a href="#nosotros" aria-label="Descubrir más sobre Navychem">DESLIZÁ PARA DESCUBRIR <span>↓</span></a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-label="Barcos de carga y apoyo marítimo">
+          <div class="hero__ocean" aria-hidden="true"></div>
+          <div class="hero__geometry" aria-hidden="true"></div>
+          <div class="hero__rings" aria-hidden="true"></div>
+          <div class="hero-slide is-active" data-slide="0" aria-hidden="false">
+            <div class="hero-slide__label"><span>OPERACIONES EN MOVIMIENTO</span><strong>01 / BUQUE DE CARGA</strong></div>
+            <img class="hero-slide__ship hero-slide__ship--cargo" src="assets/cargo-ship.png" alt="Buque portacontenedores de casco azul" fetchpriority="high" />
+          </div>
+          <div class="hero-slide" data-slide="1" aria-hidden="true">
+            <div class="hero-slide__label"><span>AL LADO DE CADA OPERACIÓN</span><strong>02 / BUQUE DE APOYO</strong></div>
+            <img class="hero-slide__ship hero-slide__ship--support" src="assets/support-vessel.png" alt="Buque de apoyo marítimo de casco azul" loading="lazy" />
+          </div>
+          <div class="hero__controls" aria-label="Controles del slideshow">
+            <button class="slide-arrow" type="button" data-direction="-1" aria-label="Imagen anterior">←</button>
+            <div class="slide-dots" role="group" aria-label="Elegir imagen">
+              <button class="is-active" type="button" data-goto="0" aria-label="Ver buque de carga" aria-current="true"></button>
+              <button type="button" data-goto="1" aria-label="Ver buque de apoyo" aria-current="false"></button>
+            </div>
+            <button class="slide-arrow" type="button" data-direction="1" aria-label="Imagen siguiente">→</button>
+          </div>
+          <span class="hero__vertical">NAVYCHEM / MARINE SOLUTIONS</span>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>QUÍMICOS NAVALES <i>✳</i> EQUIPAMIENTO <i>✳</i> SOLUCIONES MARÍTIMAS <i>✳</i></span>
+          <span>QUÍMICOS NAVALES <i>✳</i> EQUIPAMIENTO <i>✳</i> SOLUCIONES MARÍTIMAS <i>✳</i></span>
+        </div>
+      </div>
+
+      <section class="intro reveal" id="nosotros">
+        <div class="section-tag"><span>01</span> QUIÉNES SOMOS</div>
+        <div class="intro__grid">
+          <p class="intro__aside">NAVYCHEM S.A.<br />BUENOS AIRES, ARGENTINA</p>
+          <div>
+            <h2>EL RESPALDO QUE<br />VA <em>A BORDO.</em></h2>
+            <p>En Navychem pensamos en las necesidades reales de quienes trabajan en el mar. Reunimos soluciones químicas y equipamiento para el cuidado, la limpieza y la operación de embarcaciones.</p>
+            <a class="text-link" href="#contacto">HABLEMOS DE TU OPERACIÓN <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="solutions" id="soluciones">
+        <div class="solutions__heading reveal">
+          <div class="section-tag"><span>02</span> QUÉ HACEMOS</div>
+          <h2>SOLUCIONES<br /><em>EN CADA RUMBO.</em></h2>
+          <p>Una propuesta pensada para el trabajo cotidiano a bordo, desde el mantenimiento hasta el suministro de insumos técnicos.</p>
+        </div>
+        <div class="solutions__list">
+          <a class="solution-row reveal" href="#productos"><span>01</span><h3>QUÍMICOS MARINOS</h3><p>Productos para limpieza, mantenimiento y tratamiento.</p><b>↗</b></a>
+          <a class="solution-row reveal" href="#productos"><span>02</span><h3>LIMPIEZA DE BUQUES</h3><p>Soluciones para superficies, bodegas y tanques.</p><b>↗</b></a>
+          <a class="solution-row reveal" href="#productos"><span>03</span><h3>TRATAMIENTO Y TESTEO</h3><p>Insumos para el control de agua y sistemas a bordo.</p><b>↗</b></a>
+          <a class="solution-row reveal" href="#productos"><span>04</span><h3>EQUIPAMIENTO NAVAL</h3><p>Herramientas y elementos para operaciones marítimas.</p><b>↗</b></a>
+        </div>
+      </section>
+
+      <section class="products" id="productos">
+        <div class="products__intro reveal">
+          <div class="section-tag"><span>03</span> LÍNEAS DE PRODUCTO</div>
+          <h2>TODO LO QUE<br />MANTIENE UN<br /><em>BARCO EN MARCHA.</em></h2>
+          <p>Consultanos por productos, especificaciones y disponibilidad para tu operación.</p>
+        </div>
+        <div class="products__cards">
+          <article class="product-card product-card--chemicals reveal">
+            <div class="product-card__visual"><span class="product-card__glyph">H₂O</span><i></i></div>
+            <div class="product-card__details"><span>01 / MANTENIMIENTO</span><h3>QUÍMICOS<br />NAVALES</h3><p>Limpieza técnica, cuidado de superficies y tratamientos para sistemas marítimos.</p></div>
+          </article>
+          <article class="product-card product-card--testing reveal">
+            <div class="product-card__visual"><span class="product-card__glyph">pH</span><i></i></div>
+            <div class="product-card__details"><span>02 / CONTROL</span><h3>TESTEO Y<br />TRATAMIENTO</h3><p>Insumos para monitorear y mantener las condiciones del agua a bordo.</p></div>
+          </article>
+          <article class="product-card product-card--equipment reveal">
+            <div class="product-card__visual"><span class="product-card__glyph">↗</span><i></i></div>
+            <div class="product-card__details"><span>03 / OPERACIÓN</span><h3>EQUIPAMIENTO<br />MARÍTIMO</h3><p>Elementos de apoyo para tareas de limpieza, mantenimiento y operación.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="statement reveal" aria-label="Nuestro enfoque">
+        <div class="section-tag"><span>04</span> NUESTRO ENFOQUE</div>
+        <p>UNA OPERACIÓN NO SE DETIENE.<br /><em>NOSOTROS TAMPOCO DEJAMOS DE PENSAR EN ELLA.</em></p>
+        <a class="text-link" href="#contacto">CONOCÉ CÓMO PODEMOS AYUDARTE <span>↗</span></a>
+      </section>
+
+      <section class="contact" id="contacto">
+        <div class="contact__top reveal">
+          <div class="section-tag"><span>05</span> CONTACTO</div>
+          <h2>¿HACIA DÓNDE<br /><em>VAMOS?</em></h2>
+          <p>Contanos qué necesita tu embarcación o tu operación. El equipo de Navychem está en Buenos Aires, Argentina.</p>
+        </div>
+        <div class="contact__actions reveal">
+          <a class="contact__primary" href="https://navychemsa.com/index.php?op=contacto" target="_blank" rel="noopener noreferrer">ENVIAR UNA CONSULTA <span>↗</span></a>
+          <a class="contact__phone" href="tel:+541143078799"><span>LLAMANOS</span><strong>+54 11 4307-8799</strong><i>↗</i></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__main">
+        <a class="brand" href="#inicio" aria-label="Navychem, volver al inicio"><img src="assets/navychem-logo.png" alt="Navychem" /></a>
+        <p>SOLUCIONES PARA CADA TRAVESÍA.<br />BUENOS AIRES, ARGENTINA.</p>
+        <a href="#inicio">VOLVER ARRIBA ↑</a>
+      </div>
+      <div class="site-footer__bottom"><small>© <span id="year">2026</span> NAVYCHEM S.A.</small><span>Hecho por <a href="https://zigodev.com.ar" target="_blank" rel="noopener noreferrer">zigodev</a></span><small>INDUSTRIA MARÍTIMA / ARGENTINA</small></div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

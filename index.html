@@ -13,8 +13,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
+    <div class="page-loader" aria-hidden="true">
+      <img src="assets/navychem-logo.png" alt="" />
+      <span class="page-loader__line"></span>
+    </div>
     <div class="grain" aria-hidden="true"></div>
 
     <header class="site-header">
@@ -27,9 +32,20 @@
         <a href="#productos">PRODUCTOS</a>
         <a class="nav-contact" href="#contacto">CONTACTO <span>↗</span></a>
       </nav>
-      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <label class="language-select">
+          <span class="sr-only">Idioma</span>
+          <span aria-hidden="true">◌</span>
+          <select id="language" aria-label="Idioma">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="el">ΕΛ</option>
+          </select>
+        </label>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span>
+        </button>
+      </div>
     </header>
 
     <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden>
@@ -50,7 +66,7 @@
             <a class="button button--orange" href="#soluciones">EXPLORAR SOLUCIONES <span>↗</span></a>
           </div>
           <div class="hero__foot">
-            <span>01 / 02 &nbsp; UNA NUEVA DIRECCIÓN</span>
+            <span>UNA NUEVA DIRECCIÓN</span>
             <a href="#nosotros" aria-label="Descubrir más sobre Navychem">DESLIZÁ PARA DESCUBRIR <span>↓</span></a>
           </div>
         </div>
@@ -60,11 +76,11 @@
           <div class="hero__geometry" aria-hidden="true"></div>
           <div class="hero__rings" aria-hidden="true"></div>
           <div class="hero-slide is-active" data-slide="0" aria-hidden="false">
-            <div class="hero-slide__label"><span>OPERACIONES EN MOVIMIENTO</span><strong>01 / BUQUE DE CARGA</strong></div>
+            <div class="hero-slide__label"><span>OPERACIONES EN MOVIMIENTO</span><strong>BUQUE DE CARGA</strong></div>
             <img class="hero-slide__ship hero-slide__ship--cargo" src="assets/cargo-ship.png" alt="Buque portacontenedores de casco azul" fetchpriority="high" />
           </div>
           <div class="hero-slide" data-slide="1" aria-hidden="true">
-            <div class="hero-slide__label"><span>AL LADO DE CADA OPERACIÓN</span><strong>02 / BUQUE DE APOYO</strong></div>
+            <div class="hero-slide__label"><span>AL LADO DE CADA OPERACIÓN</span><strong>BUQUE DE APOYO</strong></div>
             <img class="hero-slide__ship hero-slide__ship--support" src="assets/support-vessel.png" alt="Buque de apoyo marítimo de casco azul" loading="lazy" />
           </div>
           <div class="hero__controls" aria-label="Controles del slideshow">
@@ -87,7 +103,7 @@
       </div>
 
       <section class="intro reveal" id="nosotros">
-        <div class="section-tag"><span>01</span> QUIÉNES SOMOS</div>
+        <div class="section-tag">QUIÉNES SOMOS</div>
         <div class="intro__grid">
           <p class="intro__aside">NAVYCHEM S.A.<br />BUENOS AIRES, ARGENTINA</p>
           <div>
@@ -100,54 +116,73 @@
 
       <section class="solutions" id="soluciones">
         <div class="solutions__heading reveal">
-          <div class="section-tag"><span>02</span> QUÉ HACEMOS</div>
+          <div class="section-tag">QUÉ HACEMOS</div>
           <h2>SOLUCIONES<br /><em>EN CADA RUMBO.</em></h2>
           <p>Una propuesta pensada para el trabajo cotidiano a bordo, desde el mantenimiento hasta el suministro de insumos técnicos.</p>
         </div>
         <div class="solutions__list">
-          <a class="solution-row reveal" href="#productos"><span>01</span><h3>QUÍMICOS MARINOS</h3><p>Productos para limpieza, mantenimiento y tratamiento.</p><b>↗</b></a>
-          <a class="solution-row reveal" href="#productos"><span>02</span><h3>LIMPIEZA DE BUQUES</h3><p>Soluciones para superficies, bodegas y tanques.</p><b>↗</b></a>
-          <a class="solution-row reveal" href="#productos"><span>03</span><h3>TRATAMIENTO Y TESTEO</h3><p>Insumos para el control de agua y sistemas a bordo.</p><b>↗</b></a>
-          <a class="solution-row reveal" href="#productos"><span>04</span><h3>EQUIPAMIENTO NAVAL</h3><p>Herramientas y elementos para operaciones marítimas.</p><b>↗</b></a>
+          <a class="solution-row reveal" href="#productos"><h3>QUÍMICOS MARINOS</h3><p>Productos para limpieza, mantenimiento y tratamiento.</p><b>↗</b></a>
+          <a class="solution-row reveal" href="#productos"><h3>LIMPIEZA DE BUQUES</h3><p>Soluciones para superficies, bodegas y tanques.</p><b>↗</b></a>
+          <a class="solution-row reveal" href="#productos"><h3>TRATAMIENTO Y TESTEO</h3><p>Insumos para el control de agua y sistemas a bordo.</p><b>↗</b></a>
+          <a class="solution-row reveal" href="#productos"><h3>EQUIPAMIENTO NAVAL</h3><p>Herramientas y elementos para operaciones marítimas.</p><b>↗</b></a>
         </div>
       </section>
 
       <section class="products" id="productos">
         <div class="products__intro reveal">
-          <div class="section-tag"><span>03</span> LÍNEAS DE PRODUCTO</div>
+          <div class="section-tag">LÍNEAS DE PRODUCTO</div>
           <h2>TODO LO QUE<br />MANTIENE UN<br /><em>BARCO EN MARCHA.</em></h2>
           <p>Consultanos por productos, especificaciones y disponibilidad para tu operación.</p>
         </div>
         <div class="products__cards">
           <article class="product-card product-card--chemicals reveal">
             <div class="product-card__visual"><span class="product-card__glyph">H₂O</span><i></i></div>
-            <div class="product-card__details"><span>01 / MANTENIMIENTO</span><h3>QUÍMICOS<br />NAVALES</h3><p>Limpieza técnica, cuidado de superficies y tratamientos para sistemas marítimos.</p></div>
+            <div class="product-card__details"><span>MANTENIMIENTO</span><h3>QUÍMICOS<br />NAVALES</h3><p>Limpieza técnica, cuidado de superficies y tratamientos para sistemas marítimos.</p></div>
           </article>
           <article class="product-card product-card--testing reveal">
             <div class="product-card__visual"><span class="product-card__glyph">pH</span><i></i></div>
-            <div class="product-card__details"><span>02 / CONTROL</span><h3>TESTEO Y<br />TRATAMIENTO</h3><p>Insumos para monitorear y mantener las condiciones del agua a bordo.</p></div>
+            <div class="product-card__details"><span>CONTROL</span><h3>TESTEO Y<br />TRATAMIENTO</h3><p>Insumos para monitorear y mantener las condiciones del agua a bordo.</p></div>
           </article>
           <article class="product-card product-card--equipment reveal">
             <div class="product-card__visual"><span class="product-card__glyph">↗</span><i></i></div>
-            <div class="product-card__details"><span>03 / OPERACIÓN</span><h3>EQUIPAMIENTO<br />MARÍTIMO</h3><p>Elementos de apoyo para tareas de limpieza, mantenimiento y operación.</p></div>
+            <div class="product-card__details"><span>OPERACIÓN</span><h3>EQUIPAMIENTO<br />MARÍTIMO</h3><p>Elementos de apoyo para tareas de limpieza, mantenimiento y operación.</p></div>
           </article>
         </div>
       </section>
 
       <section class="statement reveal" aria-label="Nuestro enfoque">
-        <div class="section-tag"><span>04</span> NUESTRO ENFOQUE</div>
+        <div class="section-tag">NUESTRO ENFOQUE</div>
         <p>UNA OPERACIÓN NO SE DETIENE.<br /><em>NOSOTROS TAMPOCO DEJAMOS DE PENSAR EN ELLA.</em></p>
         <a class="text-link" href="#contacto">CONOCÉ CÓMO PODEMOS AYUDARTE <span>↗</span></a>
       </section>
 
       <section class="contact" id="contacto">
         <div class="contact__top reveal">
-          <div class="section-tag"><span>05</span> CONTACTO</div>
-          <h2>¿HACIA DÓNDE<br /><em>VAMOS?</em></h2>
-          <p>Contanos qué necesita tu embarcación o tu operación. El equipo de Navychem está en Buenos Aires, Argentina.</p>
+          <div class="section-tag">CONTACTO</div>
+          <div class="contact__intro">
+            <h2>¿HACIA DÓNDE<br /><em>VAMOS?</em></h2>
+            <p>Contanos qué necesita tu embarcación o tu operación. El equipo de Navychem está en Buenos Aires, Argentina.</p>
+          </div>
         </div>
-        <div class="contact__actions reveal">
-          <a class="contact__primary" href="https://navychemsa.com/index.php?op=contacto" target="_blank" rel="noopener noreferrer">ENVIAR UNA CONSULTA <span>↗</span></a>
+        <div class="contact__body reveal">
+          <form class="contact-form" action="https://navychemsa.com/index.php" method="post" target="_blank" rel="noopener" accept-charset="UTF-8">
+            <input type="hidden" name="op" value="enviado" />
+            <div class="contact-form__heading">
+              <h3>CONTANOS SOBRE TU OPERACIÓN</h3>
+              <span aria-hidden="true">↗</span>
+            </div>
+            <div class="contact-form__fields">
+              <label><span>NOMBRE Y APELLIDO</span><input type="text" name="nombre" autocomplete="name" required /></label>
+              <label><span>CORREO ELECTRÓNICO</span><input type="email" name="correoe" autocomplete="email" required /></label>
+              <label><span>PAÍS</span><input type="text" name="pais" autocomplete="country-name" required /></label>
+              <label><span>ASUNTO</span><input type="text" name="asunto" required /></label>
+              <label class="contact-form__message"><span>MENSAJE</span><textarea name="mensaje" rows="4" required></textarea></label>
+            </div>
+            <div class="contact-form__footer">
+              <p>La confirmación de envío se abrirá en otra pestaña.</p>
+              <button type="submit"><span>ENVIAR CONSULTA</span><span aria-hidden="true">↗</span></button>
+            </div>
+          </form>
           <a class="contact__phone" href="tel:+541143078799"><span>LLAMANOS</span><strong>+54 11 4307-8799</strong><i>↗</i></a>
         </div>
       </section>
@@ -162,6 +197,7 @@
       <div class="site-footer__bottom"><small>© <span id="year">2026</span> NAVYCHEM S.A.</small><span>Hecho por <a href="https://zigodev.com.ar" target="_blank" rel="noopener noreferrer">zigodev</a></span><small>INDUSTRIA MARÍTIMA / ARGENTINA</small></div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

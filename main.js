@@ -1,18 +1,16 @@
-document.documentElement.classList.add("js");
-
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector(".mobile-nav");
 
 function closeMenu() {
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Abrir menú");
+  menuToggle.setAttribute("aria-label", window.siteI18n.t("openMenu"));
   mobileNav.hidden = true;
 }
 
 menuToggle.addEventListener("click", () => {
   const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
   menuToggle.setAttribute("aria-expanded", String(!isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Abrir menú" : "Cerrar menú");
+  menuToggle.setAttribute("aria-label", window.siteI18n.t(isOpen ? "openMenu" : "closeMenu"));
   mobileNav.hidden = isOpen;
 });
 
@@ -53,7 +51,7 @@ function stopSlideshow() {
 function startSlideshow() {
   stopSlideshow();
   if (!reducedMotion.matches && !document.hidden) {
-    slideTimer = window.setInterval(() => showSlide(activeSlide + 1), 5500);
+    slideTimer = window.setInterval(() => showSlide(activeSlide + 1), 3900);
   }
 }
 
@@ -79,7 +77,19 @@ heroVisual.addEventListener("focusout", (event) => {
 });
 document.addEventListener("visibilitychange", startSlideshow);
 reducedMotion.addEventListener("change", startSlideshow);
-startSlideshow();
+
+const delay = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, milliseconds));
+const firstShip = document.querySelector(".hero-slide__ship--cargo");
+const shipReady = firstShip.decode ? firstShip.decode().catch(() => {}) : Promise.resolve();
+
+Promise.all([
+  delay(reducedMotion.matches ? 100 : 360),
+  Promise.race([shipReady, delay(1100)])
+]).then(() => {
+  document.documentElement.classList.add("is-ready");
+  startSlideshow();
+  window.setTimeout(() => document.documentElement.classList.add("ship-intro-done"), 1500);
+});
 
 const revealObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {

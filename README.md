@@ -17,4 +17,6 @@ Abrir `http://localhost:8787`.
 - Teléfono, ubicación y enlace al formulario tomados del [sitio actual de Navychem](https://navychemsa.com/).
 - La organización de categorías toma como referencia el [sitio de Unimarine Group](https://unimarinegroup.com/). Los textos son originales y no incluyen cifras, certificaciones ni marcas de esa empresa.
 
-El botón de consultas dirige al formulario vigente de Navychem. No se publica un correo ni un WhatsApp porque el sitio actual no los informa.
+El formulario de contacto envía los campos `nombre`, `correoe`, `pais`, `asunto` y `mensaje` al mismo procesador que utiliza el sitio vigente de Navychem. La confirmación se abre en otra pestaña. No se publica un correo ni un WhatsApp porque el sitio actual no los informa.
+
+El selector de idioma ofrece español, inglés y griego y recuerda la última opción elegida en el navegador.

@@ -16,6 +16,8 @@ const translations = [
   ['.hero-slide[data-slide="0"] .hero-slide__label strong', 'CARGO VESSEL', 'ΦΟΡΤΗΓΟ ΠΛΟΙΟ'],
   ['.hero-slide[data-slide="1"] .hero-slide__label span', 'ALONGSIDE EVERY OPERATION', 'ΔΙΠΛΑ ΣΕ ΚΑΘΕ ΕΡΓΑΣΙΑ'],
   ['.hero-slide[data-slide="1"] .hero-slide__label strong', 'SUPPORT VESSEL', 'ΠΛΟΙΟ ΥΠΟΣΤΗΡΙΞΗΣ'],
+  ['.hero-slide[data-slide="2"] .hero-slide__label span', 'PRECISION ON EVERY VOYAGE', 'ΑΚΡΙΒΕΙΑ ΣΕ ΚΑΘΕ ΤΑΞΙΔΙ'],
+  ['.hero-slide[data-slide="2"] .hero-slide__label strong', 'CHEMICAL TANKER', 'ΧΗΜΙΚΟ ΔΕΞΑΜΕΝΟΠΛΟΙΟ'],
   ['.ticker__track span', 'MARINE CHEMICALS <i>✳</i> EQUIPMENT <i>✳</i> MARITIME SOLUTIONS <i>✳</i>', 'ΝΑΥΤΙΛΙΑΚΑ ΧΗΜΙΚΑ <i>✳</i> ΕΞΟΠΛΙΣΜΟΣ <i>✳</i> ΝΑΥΤΙΛΙΑΚΕΣ ΛΥΣΕΙΣ <i>✳</i>'],
   ['.intro .section-tag', 'WHO WE ARE', 'ΠΟΙΟΙ ΕΙΜΑΣΤΕ'],
   ['.intro__aside', 'NAVYCHEM S.A.<br />BUENOS AIRES, ARGENTINA', 'NAVYCHEM S.A.<br />ΜΠΟΥΕΝΟΣ ΑΪΡΕΣ, ΑΡΓΕΝΤΙΝΗ'],
@@ -52,6 +54,7 @@ const translations = [
   ['.contact h2', 'WHERE DO WE<br /><em>GO NEXT?</em>', 'ΠΟΙΑ ΕΙΝΑΙ Η<br /><em>ΕΠΟΜΕΝΗ ΠΟΡΕΙΑ;</em>'],
   ['.contact__intro > p', 'Tell us what your vessel or operation needs. The Navychem team is based in Buenos Aires, Argentina.', 'Πείτε μας τι χρειάζεται το πλοίο ή η επιχείρησή σας. Η ομάδα της Navychem βρίσκεται στο Μπουένος Άιρες της Αργεντινής.'],
   ['.contact-form h3', 'TELL US ABOUT YOUR OPERATION', 'ΠΕΙΤΕ ΜΑΣ ΓΙΑ ΤΙΣ ΑΝΑΓΚΕΣ ΣΑΣ'],
+  ['.contact-form__eyebrow', 'ONE MESSAGE, NEW POSSIBILITIES <span aria-hidden="true">✳</span>', 'ΕΝΑ ΜΗΝΥΜΑ, ΝΕΕΣ ΔΥΝΑΤΟΤΗΤΕΣ <span aria-hidden="true">✳</span>'],
   ['.contact-form__fields label:nth-child(1) span', 'FULL NAME', 'ΟΝΟΜΑΤΕΠΩΝΥΜΟ'],
   ['.contact-form__fields label:nth-child(2) span', 'EMAIL ADDRESS', 'ΔΙΕΥΘΥΝΣΗ EMAIL'],
   ['.contact-form__fields label:nth-child(3) span', 'COUNTRY', 'ΧΩΡΑ'],
@@ -70,11 +73,11 @@ const interfaceCopy = {
   es: {
     language: 'Idioma', openMenu: 'Abrir menú', closeMenu: 'Cerrar menú',
     mainNav: 'Navegación principal', mobileNav: 'Navegación móvil',
-    hero: 'Presentación de Navychem', visual: 'Barcos de carga y apoyo marítimo',
+    hero: 'Presentación de Navychem', visual: 'Buques de carga, apoyo y transporte químico',
     previous: 'Imagen anterior', next: 'Imagen siguiente', choose: 'Elegir imagen',
-    cargo: 'Ver buque de carga', support: 'Ver buque de apoyo',
+    cargo: 'Ver buque de carga', support: 'Ver buque de apoyo', tanker: 'Ver buque tanque',
     cargoAlt: 'Buque portacontenedores de casco azul',
-    supportAlt: 'Buque de apoyo marítimo de casco azul',
+    supportAlt: 'Buque de apoyo marítimo de casco azul', tankerAlt: 'Buque tanque químico de casco azul', whatsapp: 'Escribinos por WhatsApp',
     discover: 'Descubrir más sobre Navychem', approach: 'Nuestro enfoque',
     home: 'Navychem, ir al inicio', top: 'Navychem, volver al inicio',
     title: 'Navychem — Soluciones para cada travesía',
@@ -84,10 +87,10 @@ const interfaceCopy = {
   en: {
     language: 'Language', openMenu: 'Open menu', closeMenu: 'Close menu',
     mainNav: 'Main navigation', mobileNav: 'Mobile navigation',
-    hero: 'Introducing Navychem', visual: 'Cargo and maritime support vessels',
+    hero: 'Introducing Navychem', visual: 'Cargo, support and chemical tanker vessels',
     previous: 'Previous image', next: 'Next image', choose: 'Choose image',
-    cargo: 'View cargo vessel', support: 'View support vessel',
-    cargoAlt: 'Blue-hulled container ship', supportAlt: 'Blue-hulled maritime support vessel',
+    cargo: 'View cargo vessel', support: 'View support vessel', tanker: 'View chemical tanker',
+    cargoAlt: 'Blue-hulled container ship', supportAlt: 'Blue-hulled maritime support vessel', tankerAlt: 'Blue-hulled chemical tanker', whatsapp: 'Message us on WhatsApp',
     discover: 'Discover more about Navychem', approach: 'Our approach',
     home: 'Navychem, go to home', top: 'Navychem, back to top',
     title: 'Navychem — Solutions for every voyage',
@@ -97,11 +100,11 @@ const interfaceCopy = {
   el: {
     language: 'Γλώσσα', openMenu: 'Άνοιγμα μενού', closeMenu: 'Κλείσιμο μενού',
     mainNav: 'Κύρια πλοήγηση', mobileNav: 'Πλοήγηση κινητού',
-    hero: 'Παρουσίαση της Navychem', visual: 'Φορτηγά και βοηθητικά πλοία',
+    hero: 'Παρουσίαση της Navychem', visual: 'Φορτηγά, βοηθητικά και χημικά δεξαμενόπλοια',
     previous: 'Προηγούμενη εικόνα', next: 'Επόμενη εικόνα', choose: 'Επιλογή εικόνας',
-    cargo: 'Προβολή φορτηγού πλοίου', support: 'Προβολή πλοίου υποστήριξης',
+    cargo: 'Προβολή φορτηγού πλοίου', support: 'Προβολή πλοίου υποστήριξης', tanker: 'Προβολή χημικού δεξαμενόπλοιου',
     cargoAlt: 'Πλοίο μεταφοράς εμπορευματοκιβωτίων με μπλε κύτος',
-    supportAlt: 'Πλοίο ναυτιλιακής υποστήριξης με μπλε κύτος',
+    supportAlt: 'Πλοίο ναυτιλιακής υποστήριξης με μπλε κύτος', tankerAlt: 'Χημικό δεξαμενόπλοιο με μπλε κύτος', whatsapp: 'Στείλτε μας μήνυμα στο WhatsApp',
     discover: 'Μάθετε περισσότερα για τη Navychem', approach: 'Η προσέγγισή μας',
     home: 'Navychem, μετάβαση στην αρχή', top: 'Navychem, επιστροφή στην αρχή',
     title: 'Navychem — Λύσεις για κάθε ταξίδι',
@@ -144,12 +147,15 @@ function setLanguage(language) {
   document.querySelector('.statement').ariaLabel = ui.approach;
   document.querySelector('.hero-slide__ship--cargo').alt = ui.cargoAlt;
   document.querySelector('.hero-slide__ship--support').alt = ui.supportAlt;
+  document.querySelector('.hero-slide__ship--tanker').alt = ui.tankerAlt;
   document.querySelector('.hero__controls').ariaLabel = ui.choose;
   document.querySelector('.slide-dots').ariaLabel = ui.choose;
   document.querySelector('[data-direction="-1"]').ariaLabel = ui.previous;
   document.querySelector('[data-direction="1"]').ariaLabel = ui.next;
   document.querySelector('[data-goto="0"]').ariaLabel = ui.cargo;
   document.querySelector('[data-goto="1"]').ariaLabel = ui.support;
+  document.querySelector('[data-goto="2"]').ariaLabel = ui.tanker;
+  document.querySelector('.whatsapp-float').ariaLabel = ui.whatsapp;
   document.querySelector('.menu-toggle').ariaLabel = document.querySelector('.menu-toggle').getAttribute('aria-expanded') === 'true' ? ui.closeMenu : ui.openMenu;
   document.querySelector('#language').value = selected;
 

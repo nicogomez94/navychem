@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20261020-3" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -58,6 +58,7 @@
     <main>
       <section class="hero" id="inicio" aria-label="Presentación de Navychem">
         <div class="hero__copy">
+          <div class="hero__ambient" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="hero__eyebrow"><span>INDUSTRIA MARÍTIMA / ARGENTINA</span><span>DESDE BUENOS AIRES</span></div>
           <div class="hero__headline-wrap">
             <p class="hero__pretitle">PARA LOS DESAFÍOS DE CADA PUERTO</p>
@@ -71,9 +72,10 @@
           </div>
         </div>
 
-        <div class="hero__visual" data-backdrop="0" aria-label="Barcos de carga y apoyo marítimo">
+        <div class="hero__visual" data-backdrop="0" aria-label="Buques de carga, apoyo y transporte químico">
           <div class="hero__backdrop hero__backdrop--cargo is-active" data-backdrop="0" aria-hidden="true"></div>
           <div class="hero__backdrop hero__backdrop--support" data-backdrop="1" aria-hidden="true"></div>
+          <div class="hero__backdrop hero__backdrop--tanker" data-backdrop="2" aria-hidden="true"></div>
           <div class="hero__geometry" aria-hidden="true"></div>
           <div class="hero__rings" aria-hidden="true"></div>
           <div class="hero-slide is-active" data-slide="0" aria-hidden="false">
@@ -84,11 +86,16 @@
             <div class="hero-slide__label"><span>AL LADO DE CADA OPERACIÓN</span><strong>BUQUE DE APOYO</strong></div>
             <img class="hero-slide__ship hero-slide__ship--support" src="assets/support-vessel.png" alt="Buque de apoyo marítimo de casco azul" loading="lazy" />
           </div>
+          <div class="hero-slide" data-slide="2" aria-hidden="true">
+            <div class="hero-slide__label"><span>PRECISIÓN EN CADA TRAVESÍA</span><strong>BUQUE TANQUE</strong></div>
+            <img class="hero-slide__ship hero-slide__ship--tanker" src="assets/chemical-tanker.png" alt="Buque tanque químico de casco azul" loading="lazy" />
+          </div>
           <div class="hero__controls" aria-label="Controles del slideshow">
             <button class="slide-arrow" type="button" data-direction="-1" aria-label="Imagen anterior">←</button>
             <div class="slide-dots" role="group" aria-label="Elegir imagen">
               <button class="is-active" type="button" data-goto="0" aria-label="Ver buque de carga" aria-current="true"></button>
               <button type="button" data-goto="1" aria-label="Ver buque de apoyo" aria-current="false"></button>
+              <button type="button" data-goto="2" aria-label="Ver buque tanque" aria-current="false"></button>
             </div>
             <button class="slide-arrow" type="button" data-direction="1" aria-label="Imagen siguiente">→</button>
           </div>
@@ -104,6 +111,7 @@
       </div>
 
       <section class="intro reveal" id="nosotros">
+        <div class="intro__orbit" aria-hidden="true"><span></span><span></span></div>
         <div class="section-tag">QUIÉNES SOMOS</div>
         <div class="intro__grid">
           <p class="intro__aside">NAVYCHEM S.A.<br />BUENOS AIRES, ARGENTINA</p>
@@ -168,6 +176,7 @@
         <div class="contact__body reveal">
           <form class="contact-form" action="https://navychemsa.com/index.php" method="post" target="_blank" rel="noopener" accept-charset="UTF-8">
             <input type="hidden" name="op" value="enviado" />
+            <p class="contact-form__eyebrow">UN MENSAJE, NUEVAS POSIBILIDADES <span aria-hidden="true">✳</span></p>
             <div class="contact-form__heading">
               <h3>CONTANOS SOBRE TU OPERACIÓN</h3>
               <span aria-hidden="true">↗</span>
@@ -198,7 +207,13 @@
       <div class="site-footer__bottom"><small>© <span id="year">2026</span> NAVYCHEM S.A.</small><span>Hecho por <a href="https://zigodev.com.ar" target="_blank" rel="noopener noreferrer">zigodev</a></span><small>INDUSTRIA MARÍTIMA / ARGENTINA</small></div>
     </footer>
 
-    <script src="translations.js"></script>
-    <script src="main.js"></script>
+    <a class="whatsapp-float" href="https://wa.me/541143078799" target="_blank" rel="noopener noreferrer" aria-label="Escribinos por WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M16.02 2.67A13.26 13.26 0 0 0 4.55 22.55L2.67 29.3l6.94-1.82A13.32 13.32 0 1 0 16.02 2.67Zm0 24.23a10.9 10.9 0 0 1-5.55-1.52l-.4-.24-4.12 1.08 1.1-4.01-.26-.41A10.94 10.94 0 1 1 16.02 26.9Zm6.01-8.18c-.33-.17-1.96-.97-2.26-1.08-.3-.11-.52-.17-.74.17-.22.33-.85 1.08-1.04 1.3-.19.22-.39.25-.72.08-.33-.16-1.4-.52-2.67-1.65-.99-.89-1.66-1.98-1.85-2.31-.19-.33-.02-.51.14-.67.15-.15.33-.39.5-.58.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.58-.08-.16-.74-1.79-1.01-2.45-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.13-1.15 2.75s1.18 3.19 1.35 3.41c.16.22 2.32 3.55 5.62 4.98.79.34 1.41.55 1.89.7.79.25 1.52.21 2.09.13.64-.1 1.96-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.38Z"/>
+      </svg>
+    </a>
+
+    <script src="translations.js?v=20261020-3"></script>
+    <script src="main.js?v=20261020-3"></script>
   </body>
 </html>

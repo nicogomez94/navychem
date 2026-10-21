@@ -138,7 +138,7 @@ img { display: block; max-width: 100%; }
 .intro__grid > div > p { max-width: 580px; margin: 45px 0 38px; color: #4c6174; font-size: 16px; line-height: 1.8; }
 
 /* Solutions */
-.solutions { padding: 115px 4vw 125px; color: var(--navy); background: var(--mist); }
+.solutions { padding: 115px 4vw 125px; overflow: clip; color: var(--navy); background: var(--mist); }
 .solutions__heading { display: grid; grid-template-columns: 1fr 2.1fr 1.05fr; align-items: end; gap: 3vw; padding-bottom: 80px; }
 .solutions__heading .section-tag { align-self: start; }
 .solutions h2 { margin: 0; font: 600 4.9vw/.92 var(--display); letter-spacing: -.07em; }

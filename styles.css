@@ -12,7 +12,7 @@
   --line-dark: rgba(7, 27, 50, .2);
   --display: "Syne", sans-serif;
   --body: "Manrope", sans-serif;
-  --mono: "DM Mono", monospace;
+  --mono: "IBM Plex Mono", monospace;
 }
 
 * { box-sizing: border-box; }
@@ -114,9 +114,10 @@ img { display: block; max-width: 100%; }
 
 /* Moving banner */
 .ticker { overflow: hidden; padding: 19px 0; border-bottom: 1px solid var(--line-dark); color: var(--navy); background: var(--orange); font: 700 18px var(--display); letter-spacing: -.02em; }
-.ticker__track { display: flex; width: max-content; animation: ticker 25s linear infinite; }
-.ticker__track span { flex: none; padding-right: 23px; white-space: nowrap; }
-.ticker__track i { margin: 0 24px; font-style: normal; color: var(--white); }
+.ticker__track { display: flex; width: max-content; will-change: transform; animation: ticker 70s linear infinite; }
+.ticker__group { display: flex; flex: none; min-width: max-content; }
+.ticker__item { flex: none; padding-right: 23px; white-space: nowrap; }
+.ticker__item i { margin: 0 24px; font-style: normal; color: var(--white); }
 @keyframes ticker { to { transform: translateX(-50%); } }
 
 /* Shared section elements */
@@ -375,6 +376,7 @@ html[lang="el"] .product-card h3 { overflow-wrap: anywhere; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  .ticker__track { transform: none !important; }
   .js .reveal, .js .solution-row:nth-child(even).reveal, .js .product-card.reveal { opacity: 1; transform: none; filter: none; }
   .js .product-card.reveal.is-visible:hover { transform: none; box-shadow: none; }
   .js:not(.is-ready) .hero-slide__ship { opacity: 1; }

@@ -18,7 +18,7 @@ const translations = [
   ['.hero-slide[data-slide="1"] .hero-slide__label strong', 'SUPPORT VESSEL', 'ΠΛΟΙΟ ΥΠΟΣΤΗΡΙΞΗΣ'],
   ['.hero-slide[data-slide="2"] .hero-slide__label span', 'PRECISION ON EVERY VOYAGE', 'ΑΚΡΙΒΕΙΑ ΣΕ ΚΑΘΕ ΤΑΞΙΔΙ'],
   ['.hero-slide[data-slide="2"] .hero-slide__label strong', 'CHEMICAL TANKER', 'ΧΗΜΙΚΟ ΔΕΞΑΜΕΝΟΠΛΟΙΟ'],
-  ['.ticker__track span', 'MARINE CHEMICALS <i>✳</i> EQUIPMENT <i>✳</i> MARITIME SOLUTIONS <i>✳</i>', 'ΝΑΥΤΙΛΙΑΚΑ ΧΗΜΙΚΑ <i>✳</i> ΕΞΟΠΛΙΣΜΟΣ <i>✳</i> ΝΑΥΤΙΛΙΑΚΕΣ ΛΥΣΕΙΣ <i>✳</i>'],
+  ['.ticker__item', 'MARINE CHEMICALS <i>✳</i> EQUIPMENT <i>✳</i> MARITIME SOLUTIONS <i>✳</i>', 'ΝΑΥΤΙΛΙΑΚΑ ΧΗΜΙΚΑ <i>✳</i> ΕΞΟΠΛΙΣΜΟΣ <i>✳</i> ΝΑΥΤΙΛΙΑΚΕΣ ΛΥΣΕΙΣ <i>✳</i>'],
   ['.intro .section-tag', 'WHO WE ARE', 'ΠΟΙΟΙ ΕΙΜΑΣΤΕ'],
   ['.intro__aside', 'NAVYCHEM S.A.<br />BUENOS AIRES, ARGENTINA', 'NAVYCHEM S.A.<br />ΜΠΟΥΕΝΟΣ ΑΪΡΕΣ, ΑΡΓΕΝΤΙΝΗ'],
   ['.intro h2', 'SUPPORT THAT<br />GOES <em>ON BOARD.</em>', 'ΥΠΟΣΤΗΡΙΞΗ<br /><em>ΕΠΙ ΤΟΥ ΠΛΟΙΟΥ.</em>'],

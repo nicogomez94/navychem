@@ -24,10 +24,19 @@ document.addEventListener("keydown", (event) => {
 
 const slides = [...document.querySelectorAll(".hero-slide")];
 const dots = [...document.querySelectorAll(".slide-dots button")];
+const backdrops = [...document.querySelectorAll(".hero__backdrop")];
 const heroVisual = document.querySelector(".hero__visual");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let activeSlide = 0;
 let slideTimer;
+let backdropTimer;
+
+function showBackdrop(index) {
+  backdrops.forEach((backdrop, backdropIndex) => {
+    backdrop.classList.toggle("is-active", backdropIndex === index);
+  });
+  heroVisual.dataset.backdrop = String(index);
+}
 
 function showSlide(index) {
   activeSlide = (index + slides.length) % slides.length;
@@ -41,6 +50,13 @@ function showSlide(index) {
     dot.classList.toggle("is-active", isActive);
     dot.setAttribute("aria-current", String(isActive));
   });
+
+  window.clearTimeout(backdropTimer);
+  if (reducedMotion.matches) {
+    showBackdrop(activeSlide);
+  } else {
+    backdropTimer = window.setTimeout(() => showBackdrop(activeSlide), 950);
+  }
 }
 
 function stopSlideshow() {
@@ -76,7 +92,13 @@ heroVisual.addEventListener("focusout", (event) => {
   if (!heroVisual.contains(event.relatedTarget)) startSlideshow();
 });
 document.addEventListener("visibilitychange", startSlideshow);
-reducedMotion.addEventListener("change", startSlideshow);
+reducedMotion.addEventListener("change", () => {
+  if (reducedMotion.matches) {
+    window.clearTimeout(backdropTimer);
+    showBackdrop(activeSlide);
+  }
+  startSlideshow();
+});
 
 const delay = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, milliseconds));
 const firstShip = document.querySelector(".hero-slide__ship--cargo");

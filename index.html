@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261020-4" />
+    <link rel="stylesheet" href="styles.css?v=20261027-1" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -106,26 +106,36 @@
       <div class="ticker" aria-hidden="true">
         <div class="ticker__track">
           <div class="ticker__group">
-            <span class="ticker__item">QUÍMICOS NAVALES <i>✳</i> EQUIPAMIENTO <i>✳</i> SOLUCIONES MARÍTIMAS <i>✳</i></span>
-            <span class="ticker__item">QUÍMICOS NAVALES <i>✳</i> EQUIPAMIENTO <i>✳</i> SOLUCIONES MARÍTIMAS <i>✳</i></span>
-            <span class="ticker__item">QUÍMICOS NAVALES <i>✳</i> EQUIPAMIENTO <i>✳</i> SOLUCIONES MARÍTIMAS <i>✳</i></span>
+            <span class="ticker__item">QUÍMICOS NAVALES <i class="ticker__mark"></i> EQUIPAMIENTO <i class="ticker__mark"></i> SOLUCIONES MARÍTIMAS <i class="ticker__mark"></i></span>
+            <span class="ticker__item">QUÍMICOS NAVALES <i class="ticker__mark"></i> EQUIPAMIENTO <i class="ticker__mark"></i> SOLUCIONES MARÍTIMAS <i class="ticker__mark"></i></span>
+            <span class="ticker__item">QUÍMICOS NAVALES <i class="ticker__mark"></i> EQUIPAMIENTO <i class="ticker__mark"></i> SOLUCIONES MARÍTIMAS <i class="ticker__mark"></i></span>
           </div>
           <div class="ticker__group">
-            <span class="ticker__item">QUÍMICOS NAVALES <i>✳</i> EQUIPAMIENTO <i>✳</i> SOLUCIONES MARÍTIMAS <i>✳</i></span>
-            <span class="ticker__item">QUÍMICOS NAVALES <i>✳</i> EQUIPAMIENTO <i>✳</i> SOLUCIONES MARÍTIMAS <i>✳</i></span>
-            <span class="ticker__item">QUÍMICOS NAVALES <i>✳</i> EQUIPAMIENTO <i>✳</i> SOLUCIONES MARÍTIMAS <i>✳</i></span>
+            <span class="ticker__item">QUÍMICOS NAVALES <i class="ticker__mark"></i> EQUIPAMIENTO <i class="ticker__mark"></i> SOLUCIONES MARÍTIMAS <i class="ticker__mark"></i></span>
+            <span class="ticker__item">QUÍMICOS NAVALES <i class="ticker__mark"></i> EQUIPAMIENTO <i class="ticker__mark"></i> SOLUCIONES MARÍTIMAS <i class="ticker__mark"></i></span>
+            <span class="ticker__item">QUÍMICOS NAVALES <i class="ticker__mark"></i> EQUIPAMIENTO <i class="ticker__mark"></i> SOLUCIONES MARÍTIMAS <i class="ticker__mark"></i></span>
           </div>
         </div>
       </div>
 
       <section class="intro reveal" id="nosotros">
         <div class="intro__orbit" aria-hidden="true"><span></span><span></span></div>
-        <div class="section-tag">QUIÉNES SOMOS</div>
+        <img class="intro__watermark" src="assets/navychem-isotipo.png" alt="" aria-hidden="true" />
+        <div class="section-tag">NOSOTROS</div>
         <div class="intro__grid">
-          <p class="intro__aside">NAVYCHEM S.A.<br />BUENOS AIRES, ARGENTINA</p>
-          <div>
+          <div class="intro__aside">
+            <strong>NAVYCHEM S.A.</strong>
+            <span>BUENOS AIRES, ARGENTINA</span>
+            <small>SOLUCIONES PARA LA INDUSTRIA MARÍTIMA</small>
+          </div>
+          <div class="intro__content">
             <h2>EL RESPALDO QUE<br />VA <em>A BORDO.</em></h2>
-            <p>En Navychem pensamos en las necesidades reales de quienes trabajan en el mar. Reunimos soluciones químicas y equipamiento para el cuidado, la limpieza y la operación de embarcaciones.</p>
+            <p class="intro__lead">Navychem nació en Buenos Aires para acompañar a la industria marítima con soluciones confiables. Reunimos químicos navales y equipamiento para el cuidado, la limpieza y la operación de embarcaciones.</p>
+            <div class="intro__principles">
+              <article><h3>ORIGEN</h3><p>Experiencia local y una mirada enfocada en las necesidades reales a bordo.</p></article>
+              <article><h3>VISIÓN</h3><p>Ser un socio cercano y confiable para cada operación marítima.</p></article>
+              <article><h3>PROPÓSITO</h3><p>Facilitar operaciones seguras, eficientes y bien abastecidas.</p></article>
+            </div>
             <a class="text-link" href="#contacto">HABLEMOS DE TU OPERACIÓN <span>↗</span></a>
           </div>
         </div>
@@ -161,16 +171,50 @@
             <div class="product-card__details"><span>CONTROL</span><h3>TESTEO Y<br />TRATAMIENTO</h3><p>Insumos para monitorear y mantener las condiciones del agua a bordo.</p></div>
           </article>
           <article class="product-card product-card--equipment reveal">
-            <div class="product-card__visual"><span class="product-card__glyph">↗</span><i></i></div>
+            <div class="product-card__visual">
+              <span class="product-card__glyph product-card__glyph--icon" aria-hidden="true">
+                <svg viewBox="0 0 120 120" focusable="false"><circle cx="60" cy="60" r="16"/><path d="M60 9v19M60 92v19M9 60h19M92 60h19M24 24l14 14M82 82l14 14M96 24L82 38M38 82L24 96"/><circle cx="60" cy="60" r="35"/><path d="M60 44v32M44 60h32"/></svg>
+              </span>
+              <i></i>
+            </div>
             <div class="product-card__details"><span>OPERACIÓN</span><h3>EQUIPAMIENTO<br />MARÍTIMO</h3><p>Elementos de apoyo para tareas de limpieza, mantenimiento y operación.</p></div>
           </article>
         </div>
       </section>
 
       <section class="statement reveal" aria-label="Nuestro enfoque">
-        <div class="section-tag">NUESTRO ENFOQUE</div>
-        <p>UNA OPERACIÓN NO SE DETIENE.<br /><em>NOSOTROS TAMPOCO DEJAMOS DE PENSAR EN ELLA.</em></p>
-        <a class="text-link" href="#contacto">CONOCÉ CÓMO PODEMOS AYUDARTE <span>↗</span></a>
+        <div class="statement__top">
+          <div class="section-tag">NUESTRO ENFOQUE</div>
+          <span class="statement__route">BUENOS AIRES → LATINOAMÉRICA</span>
+        </div>
+        <div class="statement__grid">
+          <div class="statement__copy">
+            <h2 class="statement__title">CALIDAD QUE RESPALDA.<br /><em>LOGÍSTICA QUE ACOMPAÑA.</em></h2>
+            <p class="statement__description">Pensamos siempre en la operación: seleccionamos productos confiables, coordinamos cada entrega y acompañamos cada necesidad con atención cercana.</p>
+            <div class="statement__pillars">
+              <span>CALIDAD</span><span>LOGÍSTICA</span><span>SERVICIO</span>
+            </div>
+            <a class="text-link" href="#contacto">CONOCÉ CÓMO PODEMOS AYUDARTE <span>↗</span></a>
+          </div>
+          <div class="statement__map" aria-hidden="true">
+            <svg viewBox="0 0 520 620" role="img">
+              <defs>
+                <linearGradient id="continent-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#173c5f"/><stop offset="1" stop-color="#0a243e"/></linearGradient>
+                <filter id="map-glow"><feGaussianBlur stdDeviation="7"/></filter>
+              </defs>
+              <path class="statement__continent" d="M185 25c51-5 110 17 148 53 28 27 77 32 104 76 26 43 10 87-23 124-28 31-34 76-65 111-29 34-38 64-51 112-13 49-43 91-76 111-9-43-15-89-39-124-27-39-62-69-72-115-9-42 8-77-16-113-28-42-21-87 7-126 29-40 35-100 83-109Z"/>
+              <path class="statement__argentina" d="M282 351c23 8 42 26 50 51 8 27-2 48-10 73-10 34-28 75-51 105-10-31-12-67-25-96-12-27-26-53-23-80 4-31 25-52 59-53Z"/>
+              <g class="statement__routes">
+                <path d="M318 430Q235 304 151 245"/><path d="M318 430Q360 277 408 184"/><path d="M318 430Q421 367 466 330"/>
+              </g>
+              <circle class="statement__glow" cx="318" cy="430" r="28"/>
+              <circle class="statement__pulse" cx="318" cy="430" r="8"/>
+              <circle class="statement__port" cx="151" cy="245" r="5"/><circle class="statement__port" cx="408" cy="184" r="5"/><circle class="statement__port" cx="466" cy="330" r="5"/>
+            </svg>
+            <span class="statement__map-label statement__map-label--origin">OPERAMOS DESDE<br /><strong>BUENOS AIRES</strong></span>
+            <span class="statement__map-label statement__map-label--reach">PROYECCIÓN<br /><strong>LATINOAMÉRICA</strong></span>
+          </div>
+        </div>
       </section>
 
       <section class="contact" id="contacto">
@@ -184,7 +228,7 @@
         <div class="contact__body reveal">
           <form class="contact-form" action="https://navychemsa.com/index.php" method="post" target="_blank" rel="noopener" accept-charset="UTF-8">
             <input type="hidden" name="op" value="enviado" />
-            <p class="contact-form__eyebrow">UN MENSAJE, NUEVAS POSIBILIDADES <span aria-hidden="true">✳</span></p>
+            <p class="contact-form__eyebrow">UN MENSAJE, NUEVAS POSIBILIDADES <span class="contact-form__brand-mark" aria-hidden="true"></span></p>
             <div class="contact-form__heading">
               <h3>CONTANOS SOBRE TU OPERACIÓN</h3>
               <span aria-hidden="true">↗</span>
@@ -221,7 +265,7 @@
       </svg>
     </a>
 
-    <script src="translations.js?v=20261020-4"></script>
-    <script src="main.js?v=20261020-4"></script>
+    <script src="translations.js?v=20261027-1"></script>
+    <script src="main.js?v=20261027-1"></script>
   </body>
 </html>

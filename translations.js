@@ -78,6 +78,9 @@ const translations = [
   ['.contact-form__footer p', 'The submission confirmation will open in a new tab.', 'Η επιβεβαίωση αποστολής θα ανοίξει σε νέα καρτέλα.'],
   ['.contact-form__footer button', '<span>SEND INQUIRY</span><span aria-hidden="true">↗</span>', '<span>ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ</span><span aria-hidden="true">↗</span>'],
   ['.contact__phone > span', 'CALL US', 'ΚΑΛΕΣΤΕ ΜΑΣ'],
+  ['.ocean-statement .section-tag', 'OUR COMMITMENT', 'Η ΔΕΣΜΕΥΣΗ ΜΑΣ'],
+  ['.ocean-statement h2', 'OPERATIONS NEVER STOP.<br /><em>WE ALWAYS THINK ABOUT THE OPERATION, THE SERVICE AND MEETING EVERY NEED.</em>', 'ΟΙ ΕΡΓΑΣΙΕΣ ΔΕΝ ΣΤΑΜΑΤΟΥΝ.<br /><em>ΣΚΕΦΤΟΜΑΣΤΕ ΠΑΝΤΑ ΤΗ ΛΕΙΤΟΥΡΓΙΑ, ΤΗΝ ΕΞΥΠΗΡΕΤΗΣΗ ΚΑΙ ΤΗΝ ΚΑΛΥΨΗ ΚΑΘΕ ΑΝΑΓΚΗΣ.</em>'],
+  ['.ocean-statement .text-link', 'EXPLORE OUR SOLUTIONS <span>→</span>', 'ΔΕΙΤΕ ΤΙΣ ΛΥΣΕΙΣ ΜΑΣ <span>→</span>'],
   ['.site-footer__main p', 'SOLUTIONS FOR EVERY VOYAGE.<br />BUENOS AIRES, ARGENTINA.', 'ΛΥΣΕΙΣ ΓΙΑ ΚΑΘΕ ΤΑΞΙΔΙ.<br />ΜΠΟΥΕΝΟΣ ΑΪΡΕΣ, ΑΡΓΕΝΤΙΝΗ.'],
   ['.site-footer__main > a:last-child', 'BACK TO TOP ↑', 'ΠΙΣΩ ΣΤΗΝ ΑΡΧΗ ↑'],
   ['.site-footer__bottom > span', 'Made by <a href="https://zigodev.com.ar" target="_blank" rel="noopener noreferrer">zigodev</a>', 'Κατασκευή από <a href="https://zigodev.com.ar" target="_blank" rel="noopener noreferrer">zigodev</a>'],
@@ -93,7 +96,7 @@ const interfaceCopy = {
     cargo: 'Ver buque de carga', support: 'Ver buque de apoyo', tanker: 'Ver buque tanque',
     cargoAlt: 'Buque portacontenedores de casco azul',
     supportAlt: 'Buque de apoyo marítimo de casco azul', tankerAlt: 'Buque tanque químico de casco azul', whatsapp: 'Escribinos por WhatsApp',
-    discover: 'Descubrir más sobre Navychem', approach: 'Nuestro enfoque',
+    discover: 'Descubrir más sobre Navychem', approach: 'Nuestro enfoque', commitment: 'Nuestro compromiso',
     home: 'Navychem, ir al inicio', top: 'Navychem, volver al inicio',
     title: 'Navychem — Soluciones para cada travesía',
     description: 'Navychem S.A. Soluciones para la operación marítima: químicos navales, limpieza, tratamiento de aguas y equipamiento. Buenos Aires, Argentina.',
@@ -106,7 +109,7 @@ const interfaceCopy = {
     previous: 'Previous image', next: 'Next image', choose: 'Choose image',
     cargo: 'View cargo vessel', support: 'View support vessel', tanker: 'View chemical tanker',
     cargoAlt: 'Blue-hulled container ship', supportAlt: 'Blue-hulled maritime support vessel', tankerAlt: 'Blue-hulled chemical tanker', whatsapp: 'Message us on WhatsApp',
-    discover: 'Discover more about Navychem', approach: 'Our approach',
+    discover: 'Discover more about Navychem', approach: 'Our approach', commitment: 'Our commitment',
     home: 'Navychem, go to home', top: 'Navychem, back to top',
     title: 'Navychem — Solutions for every voyage',
     description: 'Navychem S.A. Maritime solutions: marine chemicals, cleaning, water treatment and equipment. Buenos Aires, Argentina.',
@@ -120,7 +123,7 @@ const interfaceCopy = {
     cargo: 'Προβολή φορτηγού πλοίου', support: 'Προβολή πλοίου υποστήριξης', tanker: 'Προβολή χημικού δεξαμενόπλοιου',
     cargoAlt: 'Πλοίο μεταφοράς εμπορευματοκιβωτίων με μπλε κύτος',
     supportAlt: 'Πλοίο ναυτιλιακής υποστήριξης με μπλε κύτος', tankerAlt: 'Χημικό δεξαμενόπλοιο με μπλε κύτος', whatsapp: 'Στείλτε μας μήνυμα στο WhatsApp',
-    discover: 'Μάθετε περισσότερα για τη Navychem', approach: 'Η προσέγγισή μας',
+    discover: 'Μάθετε περισσότερα για τη Navychem', approach: 'Η προσέγγισή μας', commitment: 'Η δέσμευσή μας',
     home: 'Navychem, μετάβαση στην αρχή', top: 'Navychem, επιστροφή στην αρχή',
     title: 'Navychem — Λύσεις για κάθε ταξίδι',
     description: 'Navychem S.A. Ναυτιλιακές λύσεις: χημικά, καθαρισμός, επεξεργασία νερού και εξοπλισμός. Μπουένος Άιρες, Αργεντινή.',
@@ -160,6 +163,7 @@ function setLanguage(language) {
   document.querySelector('.hero__visual').ariaLabel = ui.visual;
   document.querySelector('.hero__foot a').ariaLabel = ui.discover;
   document.querySelector('.statement').ariaLabel = ui.approach;
+  document.querySelector('.ocean-statement').ariaLabel = ui.commitment;
   document.querySelector('.hero-slide__ship--cargo').alt = ui.cargoAlt;
   document.querySelector('.hero-slide__ship--support').alt = ui.supportAlt;
   document.querySelector('.hero-slide__ship--tanker').alt = ui.tankerAlt;

@@ -29,7 +29,6 @@ const heroVisual = document.querySelector(".hero__visual");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let activeSlide = 0;
 let slideTimer;
-let backdropTimer;
 
 function showBackdrop(index) {
   backdrops.forEach((backdrop, backdropIndex) => {
@@ -40,6 +39,7 @@ function showBackdrop(index) {
 
 function showSlide(index) {
   activeSlide = (index + slides.length) % slides.length;
+  showBackdrop(activeSlide);
   slides.forEach((slide, slideIndex) => {
     const isActive = slideIndex === activeSlide;
     slide.classList.toggle("is-active", isActive);
@@ -51,12 +51,6 @@ function showSlide(index) {
     dot.setAttribute("aria-current", String(isActive));
   });
 
-  window.clearTimeout(backdropTimer);
-  if (reducedMotion.matches) {
-    showBackdrop(activeSlide);
-  } else {
-    backdropTimer = window.setTimeout(() => showBackdrop(activeSlide), 950);
-  }
 }
 
 function stopSlideshow() {
@@ -93,10 +87,7 @@ heroVisual.addEventListener("focusout", (event) => {
 });
 document.addEventListener("visibilitychange", startSlideshow);
 reducedMotion.addEventListener("change", () => {
-  if (reducedMotion.matches) {
-    window.clearTimeout(backdropTimer);
-    showBackdrop(activeSlide);
-  }
+  showBackdrop(activeSlide);
   startSlideshow();
 });
 

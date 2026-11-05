@@ -8,11 +8,13 @@
     <meta property="og:title" content="Navychem — Soluciones para cada travesía" />
     <meta property="og:description" content="Productos y soluciones para el trabajo en el mar." />
     <title>Navychem — Soluciones para cada travesía</title>
-    <link rel="icon" href="assets/navychem-logo.png" type="image/png" />
+    <link rel="icon" href="assets/navychem-isotipo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/navychem-isotipo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261028-1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css?v=20261105-3" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -35,7 +37,7 @@
       <div class="header-actions">
         <label class="language-select">
           <span class="sr-only">Idioma</span>
-          <span aria-hidden="true">◌</span>
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
           <select id="language" aria-label="Idioma">
             <option value="es">ES</option>
             <option value="en">EN</option>
@@ -84,7 +86,7 @@
           </div>
           <div class="hero-slide" data-slide="1" aria-hidden="true">
             <div class="hero-slide__label"><span>LIMPIEZA PROFESIONAL A BORDO</span><strong>QUÍMICOS NAVALES</strong></div>
-            <img class="hero-slide__ship hero-slide__drums" src="assets/chemical-drums-pair.png" alt="Tambores azules para limpieza y mantenimiento naval" loading="lazy" />
+            <img class="hero-slide__ship hero-slide__drums" src="assets/Imagen de ChatGPT 5 nov 2026, 12_49_27 p.m-1.png" alt="Barriles grises y blancos Navychem para limpieza y mantenimiento naval" loading="eager" fetchpriority="high" />
           </div>
           <div class="hero-slide" data-slide="2" aria-hidden="true">
             <div class="hero-slide__label"><span>PRECISIÓN EN CADA TRAVESÍA</span><strong>BUQUE GRANELERO</strong></div>
@@ -127,7 +129,10 @@
             <strong>NAVYCHEM S.A.</strong>
             <span>BUENOS AIRES, ARGENTINA</span>
             <small>SOLUCIONES PARA LA INDUSTRIA MARÍTIMA</small>
-            <img class="intro__drums intro__cleaning-photo" src="assets/Limpieza industrial en bodega naval.png" alt="Operario Navychem realizando limpieza industrial dentro de la bodega de un buque" loading="lazy" />
+            <figure class="intro__cleaning-figure">
+              <img class="intro__cleaning-photo" src="assets/Limpieza industrial en bodega naval-2.png" alt="Operario Navychem realizando limpieza industrial dentro de la bodega de un buque" loading="lazy" />
+              <figcaption><i class="fa-solid fa-water" aria-hidden="true"></i> Limpieza industrial en bodega naval</figcaption>
+            </figure>
           </div>
           <div class="intro__content">
             <h2>El respaldo que<br />va <em>a bordo.</em></h2>
@@ -176,21 +181,70 @@
         </div>
         <div class="products__cards">
           <article class="product-card product-card--chemicals reveal">
-            <div class="product-card__visual"><img class="product-card__drums" src="assets/chemical-drums-pair.png" alt="Tambores azules para químicos navales" loading="lazy" /><i></i></div>
+            <div class="product-card__visual"><img class="product-card__drums" src="assets/Imagen de ChatGPT 5 nov 2026, 12_49_28 p.m-2.png" alt="Línea de barriles grises, blancos y azules Navychem" loading="lazy" /><i></i></div>
             <div class="product-card__details"><span>MANTENIMIENTO</span><h3>Químicos<br />navales</h3><p>Limpieza técnica, cuidado de superficies y tratamientos para sistemas marítimos.</p></div>
           </article>
           <article class="product-card product-card--testing reveal">
-            <div class="product-card__visual"><span class="product-card__glyph">pH</span><i></i></div>
+            <div class="product-card__visual product-card__visual--testing">
+              <div class="testing-illustration" aria-hidden="true">
+                <i class="fa-solid fa-flask-vial"></i>
+                <span><strong>7.2</strong> pH</span>
+                <small><i class="fa-solid fa-droplet"></i> Control de agua</small>
+              </div>
+              <i></i>
+            </div>
             <div class="product-card__details"><span>CONTROL</span><h3>Testeo y<br />tratamiento</h3><p>Insumos para monitorear y mantener las condiciones del agua a bordo.</p></div>
           </article>
           <article class="product-card product-card--equipment reveal">
             <div class="product-card__visual">
-              <span class="product-card__glyph product-card__glyph--icon" aria-hidden="true">
-                <svg viewBox="0 0 120 120" focusable="false"><circle cx="60" cy="60" r="16"/><path d="M60 9v19M60 92v19M9 60h19M92 60h19M24 24l14 14M82 82l14 14M96 24L82 38M38 82L24 96"/><circle cx="60" cy="60" r="35"/><path d="M60 44v32M44 60h32"/></svg>
-              </span>
+              <img class="product-card__ship" src="assets/Imagen de ChatGPT 5 nov 2026, 12_17_28 p.m-3.png" alt="Buque equipado para operaciones marítimas" loading="lazy" />
               <i></i>
             </div>
             <div class="product-card__details"><span>OPERACIÓN</span><h3>Equipamiento<br />marítimo</h3><p>Elementos de apoyo para tareas de limpieza, mantenimiento y operación.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="environment-products" id="ambiente" aria-labelledby="environment-title">
+        <div class="environment-products__intro reveal">
+          <div class="section-tag">COMPROMISO AMBIENTAL</div>
+          <h2 id="environment-title">Soluciones que<br />cuidan <em>el mar.</em></h2>
+          <p>Productos y prácticas responsables para acompañar cada operación con menor impacto ambiental.</p>
+        </div>
+        <div class="environment-products__cards">
+          <article class="product-card product-card--environment product-card--commitment reveal">
+            <div class="product-card__visual product-card__visual--environment">
+              <div class="environment-illustration" aria-hidden="true">
+                <span class="environment-illustration__icon"><i class="fa-solid fa-hands-holding-circle"></i></span>
+                <span class="environment-illustration__line"></span>
+                <small>Operar · Cuidar · Preservar</small>
+              </div>
+            </div>
+            <div class="product-card__details"><span>COMPROMISO</span><h3>Cuidado del<br />medio ambiente</h3><p>Elegimos soluciones que ayudan a reducir el impacto de cada tarea a bordo.</p></div>
+          </article>
+          <article class="product-card product-card--environment product-card--biodegradable reveal">
+            <div class="product-card__visual product-card__visual--environment">
+              <div class="environment-illustration" aria-hidden="true">
+                <span class="environment-illustration__icon"><i class="fa-solid fa-leaf"></i></span>
+                <div class="environment-illustration__badge"><i class="fa-solid fa-check"></i> Biodegradable</div>
+                <small>Fórmulas de menor impacto</small>
+              </div>
+            </div>
+            <div class="product-card__details"><span>PRODUCTOS</span><h3>Fórmulas<br />biodegradables</h3><p>Alternativas eficientes pensadas para el entorno marino y el uso responsable.</p></div>
+          </article>
+          <article class="product-card product-card--environment product-card--spill reveal">
+            <div class="product-card__visual product-card__visual--environment">
+              <div class="environment-illustration" aria-hidden="true">
+                <span class="environment-illustration__icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <div class="environment-illustration__flow">
+                  <i class="fa-solid fa-oil-can"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <i class="fa-solid fa-water"></i>
+                </div>
+                <small>Prevención y respuesta</small>
+              </div>
+            </div>
+            <div class="product-card__details"><span>PREVENCIÓN</span><h3>Control de<br />derrames</h3><p>Productos y prácticas para actuar con rapidez y proteger el agua ante incidentes.</p></div>
           </article>
         </div>
       </section>
@@ -284,7 +338,7 @@
       </svg>
     </a>
 
-    <script src="translations.js?v=20261028-1"></script>
-    <script src="main.js?v=20261028-1"></script>
+    <script src="translations.js?v=20261105-3"></script>
+    <script src="main.js?v=20261105-3"></script>
   </body>
 </html>

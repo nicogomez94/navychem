@@ -14,8 +14,8 @@ const translations = [
   ['.hero__foot a', 'SCROLL TO EXPLORE <span>↓</span>', 'ΚΥΛΗΣΤΕ ΓΙΑ ΝΑ ΜΑΘΕΤΕ <span>↓</span>'],
   ['.hero-slide[data-slide="0"] .hero-slide__label span', 'OPERATIONS IN MOTION', 'ΕΡΓΑΣΙΕΣ ΣΕ ΚΙΝΗΣΗ'],
   ['.hero-slide[data-slide="0"] .hero-slide__label strong', 'CARGO VESSEL', 'ΦΟΡΤΗΓΟ ΠΛΟΙΟ'],
-  ['.hero-slide[data-slide="1"] .hero-slide__label span', 'ALONGSIDE EVERY OPERATION', 'ΔΙΠΛΑ ΣΕ ΚΑΘΕ ΕΡΓΑΣΙΑ'],
-  ['.hero-slide[data-slide="1"] .hero-slide__label strong', 'SUPPORT VESSEL', 'ΠΛΟΙΟ ΥΠΟΣΤΗΡΙΞΗΣ'],
+  ['.hero-slide[data-slide="1"] .hero-slide__label span', 'PROFESSIONAL CLEANING ON BOARD', 'ΕΠΑΓΓΕΛΜΑΤΙΚΟΣ ΚΑΘΑΡΙΣΜΟΣ ΕΠΙ ΤΟΥ ΠΛΟΙΟΥ'],
+  ['.hero-slide[data-slide="1"] .hero-slide__label strong', 'MARINE CHEMICALS', 'ΝΑΥΤΙΛΙΑΚΑ ΧΗΜΙΚΑ'],
   ['.hero-slide[data-slide="2"] .hero-slide__label span', 'PRECISION ON EVERY VOYAGE', 'ΑΚΡΙΒΕΙΑ ΣΕ ΚΑΘΕ ΤΑΞΙΔΙ'],
   ['.hero-slide[data-slide="2"] .hero-slide__label strong', 'CHEMICAL TANKER', 'ΧΗΜΙΚΟ ΔΕΞΑΜΕΝΟΠΛΟΙΟ'],
   ['.ticker__item', 'MARINE CHEMICALS <i class="ticker__mark"></i> EQUIPMENT <i class="ticker__mark"></i> MARITIME SOLUTIONS <i class="ticker__mark"></i>', 'ΝΑΥΤΙΛΙΑΚΑ ΧΗΜΙΚΑ <i class="ticker__mark"></i> ΕΞΟΠΛΙΣΜΟΣ <i class="ticker__mark"></i> ΝΑΥΤΙΛΙΑΚΕΣ ΛΥΣΕΙΣ <i class="ticker__mark"></i>'],
@@ -91,11 +91,11 @@ const interfaceCopy = {
   es: {
     language: 'Idioma', openMenu: 'Abrir menú', closeMenu: 'Cerrar menú',
     mainNav: 'Navegación principal', mobileNav: 'Navegación móvil',
-    hero: 'Presentación de Navychem', visual: 'Buques de carga, apoyo y transporte químico',
+    hero: 'Presentación de Navychem', visual: 'Operaciones marítimas, limpieza a bordo y transporte químico',
     previous: 'Imagen anterior', next: 'Imagen siguiente', choose: 'Elegir imagen',
-    cargo: 'Ver buque de carga', support: 'Ver buque de apoyo', tanker: 'Ver buque tanque',
+    cargo: 'Ver buque de carga', support: 'Ver limpieza a bordo', tanker: 'Ver buque tanque',
     cargoAlt: 'Buque portacontenedores de casco azul',
-    supportAlt: 'Buque de apoyo marítimo de casco azul', tankerAlt: 'Buque tanque químico de casco azul', whatsapp: 'Escribinos por WhatsApp',
+    supportAlt: 'Tambores azules para limpieza y mantenimiento naval', tankerAlt: 'Buque tanque químico de casco azul', whatsapp: 'Escribinos por WhatsApp',
     discover: 'Descubrir más sobre Navychem', approach: 'Nuestro enfoque', commitment: 'Nuestro compromiso',
     home: 'Navychem, ir al inicio', top: 'Navychem, volver al inicio',
     title: 'Navychem — Soluciones para cada travesía',
@@ -105,10 +105,10 @@ const interfaceCopy = {
   en: {
     language: 'Language', openMenu: 'Open menu', closeMenu: 'Close menu',
     mainNav: 'Main navigation', mobileNav: 'Mobile navigation',
-    hero: 'Introducing Navychem', visual: 'Cargo, support and chemical tanker vessels',
+    hero: 'Introducing Navychem', visual: 'Maritime operations, onboard cleaning and chemical transport',
     previous: 'Previous image', next: 'Next image', choose: 'Choose image',
-    cargo: 'View cargo vessel', support: 'View support vessel', tanker: 'View chemical tanker',
-    cargoAlt: 'Blue-hulled container ship', supportAlt: 'Blue-hulled maritime support vessel', tankerAlt: 'Blue-hulled chemical tanker', whatsapp: 'Message us on WhatsApp',
+    cargo: 'View cargo vessel', support: 'View onboard cleaning', tanker: 'View chemical tanker',
+    cargoAlt: 'Blue-hulled container ship', supportAlt: 'Blue drums for marine cleaning and maintenance', tankerAlt: 'Blue-hulled chemical tanker', whatsapp: 'Message us on WhatsApp',
     discover: 'Discover more about Navychem', approach: 'Our approach', commitment: 'Our commitment',
     home: 'Navychem, go to home', top: 'Navychem, back to top',
     title: 'Navychem — Solutions for every voyage',
@@ -118,11 +118,11 @@ const interfaceCopy = {
   el: {
     language: 'Γλώσσα', openMenu: 'Άνοιγμα μενού', closeMenu: 'Κλείσιμο μενού',
     mainNav: 'Κύρια πλοήγηση', mobileNav: 'Πλοήγηση κινητού',
-    hero: 'Παρουσίαση της Navychem', visual: 'Φορτηγά, βοηθητικά και χημικά δεξαμενόπλοια',
+    hero: 'Παρουσίαση της Navychem', visual: 'Ναυτιλιακές εργασίες, καθαρισμός επί του πλοίου και μεταφορά χημικών',
     previous: 'Προηγούμενη εικόνα', next: 'Επόμενη εικόνα', choose: 'Επιλογή εικόνας',
-    cargo: 'Προβολή φορτηγού πλοίου', support: 'Προβολή πλοίου υποστήριξης', tanker: 'Προβολή χημικού δεξαμενόπλοιου',
+    cargo: 'Προβολή φορτηγού πλοίου', support: 'Προβολή καθαρισμού επί του πλοίου', tanker: 'Προβολή χημικού δεξαμενόπλοιου',
     cargoAlt: 'Πλοίο μεταφοράς εμπορευματοκιβωτίων με μπλε κύτος',
-    supportAlt: 'Πλοίο ναυτιλιακής υποστήριξης με μπλε κύτος', tankerAlt: 'Χημικό δεξαμενόπλοιο με μπλε κύτος', whatsapp: 'Στείλτε μας μήνυμα στο WhatsApp',
+    supportAlt: 'Μπλε βαρέλια για ναυτιλιακό καθαρισμό και συντήρηση', tankerAlt: 'Χημικό δεξαμενόπλοιο με μπλε κύτος', whatsapp: 'Στείλτε μας μήνυμα στο WhatsApp',
     discover: 'Μάθετε περισσότερα για τη Navychem', approach: 'Η προσέγγισή μας', commitment: 'Η δέσμευσή μας',
     home: 'Navychem, μετάβαση στην αρχή', top: 'Navychem, επιστροφή στην αρχή',
     title: 'Navychem — Λύσεις για κάθε ταξίδι',
@@ -165,7 +165,7 @@ function setLanguage(language) {
   document.querySelector('.statement').ariaLabel = ui.approach;
   document.querySelector('.ocean-statement').ariaLabel = ui.commitment;
   document.querySelector('.hero-slide__ship--cargo').alt = ui.cargoAlt;
-  document.querySelector('.hero-slide__ship--support').alt = ui.supportAlt;
+  document.querySelector('.hero-slide__drums').alt = ui.supportAlt;
   document.querySelector('.hero-slide__ship--tanker').alt = ui.tankerAlt;
   document.querySelector('.hero__controls').ariaLabel = ui.choose;
   document.querySelector('.slide-dots').ariaLabel = ui.choose;

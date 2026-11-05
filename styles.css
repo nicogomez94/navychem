@@ -94,20 +94,20 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--display); text-transform: none; }
 .hero__backdrop { position: absolute; inset: 0; z-index: -2; opacity: 0; transform: scale(1.08); clip-path: polygon(18% 0, 100% 0, 100% 100%, 3% 100%, 35% 58%); transition: opacity 1.15s ease, transform 2.1s cubic-bezier(.16, 1, .3, 1); }
 .hero__backdrop.is-active { opacity: 1; transform: scale(1); }
 .hero__backdrop--cargo { background: linear-gradient(90deg, rgba(8, 34, 61, .25), rgba(8, 34, 61, .04)), url("assets/ocean.png") center / cover; }
-.hero__backdrop--support { background: linear-gradient(90deg, rgba(203, 224, 236, .13), rgba(255, 255, 255, .05)), url("assets/ocean-daylight.jpg") center / cover; }
+.hero__backdrop--cleaning { background: linear-gradient(90deg, rgba(3, 8, 59, .34), rgba(3, 8, 59, .02) 70%), url("assets/hero-cargo-hold-cleaning.jpg") center / cover; }
 .hero__backdrop--tanker { background: linear-gradient(90deg, rgba(4, 23, 42, .28), rgba(4, 23, 42, .04)), url("assets/ocean-blue-hour.jpg") center / cover; }
 .hero__geometry { position: absolute; z-index: -1; inset: 8% 0 0 0; opacity: .7; border-left: 1px solid rgba(255, 255, 255, .22); transform: skewX(-24deg) translateX(15%); pointer-events: none; }
 .hero__rings { position: absolute; z-index: -1; width: 36vw; aspect-ratio: 1; top: 20%; right: -16%; border: 1px solid rgba(255, 255, 255, .27); border-radius: 50%; box-shadow: 0 0 0 60px rgba(255,255,255,.025), 0 0 0 120px rgba(255,255,255,.02); }
 .hero-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translate3d(7%, 18px, 0) scale(.96); filter: blur(8px); transition: opacity .75s ease, transform 1.05s cubic-bezier(.16, 1, .3, 1), filter .8s ease, visibility .75s; pointer-events: none; }
 .hero-slide.is-active { opacity: 1; visibility: visible; transform: translate3d(0, 0, 0) scale(1); filter: blur(0); }
 .hero-slide__ship { position: absolute; z-index: 2; width: 120%; max-width: none; height: auto; left: -17%; bottom: 11%; filter: drop-shadow(0 28px 30px rgba(3, 18, 33, .32)); }
-.hero-slide__ship--support { width: 111%; left: -7%; bottom: 9%; }
+.hero-slide__drums { width: 72%; left: -2%; bottom: 3%; filter: drop-shadow(0 30px 34px rgba(3, 8, 59, .48)); }
 .hero-slide__ship--tanker { width: 119%; left: -16%; bottom: 10%; }
 .hero-slide__label { position: absolute; z-index: 3; top: 118px; right: 4vw; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; color: var(--white); text-align: right; font: 600 10px var(--mono); letter-spacing: .09em; text-shadow: 0 1px 12px rgba(0,0,0,.3); }
-.hero__visual[data-backdrop="1"] .hero-slide__label { color: var(--navy); text-shadow: 0 1px 12px rgba(255, 255, 255, .75); }
+.hero__visual[data-backdrop="1"] .hero-slide__label { color: var(--white); text-shadow: 0 1px 12px rgba(0, 0, 0, .55); }
 .hero-slide__label strong { font-weight: 600; font-size: 12px; }
 .hero__vertical { position: absolute; z-index: 3; top: 50%; right: 2.2vw; transform: translate(50%, -50%) rotate(90deg); transform-origin: center; color: var(--white); opacity: .82; white-space: nowrap; font: 600 9px var(--mono); letter-spacing: .18em; }
-.hero__visual[data-backdrop="1"] .hero__vertical { color: var(--navy); }
+.hero__visual[data-backdrop="1"] .hero__vertical { color: var(--white); }
 .hero__controls { position: absolute; z-index: 10; right: 110px; bottom: 2.2vw; display: flex; align-items: center; gap: 14px; }
 .slide-arrow { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid rgba(255, 255, 255, .7); border-radius: 50%; color: var(--white); background: rgba(7, 27, 120, .2); cursor: pointer; transition: background .25s, color .25s; }
 .slide-arrow:hover { color: var(--navy); background: var(--orange); }
@@ -323,6 +323,7 @@ html[lang="el"] .product-card h3 { overflow-wrap: anywhere; }
   .hero { grid-template-columns: 49% 51%; }
   .hero h1 { font-size: 6vw; }
   .hero-slide__ship { width: 135%; left: -27%; }
+  .hero-slide__drums { width: 76%; left: -4%; }
   .solutions__heading { grid-template-columns: 1fr 2fr; }
   .solutions__heading > p { grid-column: 2; }
   .products__intro { grid-template-columns: 25% 1fr; }
@@ -368,7 +369,8 @@ html[lang="el"] .product-card h3 { overflow-wrap: anywhere; }
   .hero-slide__label { top: 18px; right: 18px; font-size: 8px; }
   .hero-slide__label strong { font-size: 9px; }
   .hero-slide__ship { width: 108%; left: -7%; bottom: 8%; }
-  .hero-slide__ship--support { width: 98%; left: 0; bottom: 6%; }
+  .hero__backdrop--cleaning { background-position: 68% center; }
+  .hero-slide__drums { width: 68%; left: -4%; bottom: 2%; }
   .hero-slide__ship--tanker { width: 108%; left: -7%; bottom: 8%; }
   .hero__vertical { display: none; }
   .hero__controls { right: 90px; bottom: 15px; }
@@ -442,7 +444,7 @@ html[lang="el"] .product-card h3 { overflow-wrap: anywhere; }
   .hero h1 { font-size: 10.8vw; }
   .hero__description { max-width: 330px; }
   .hero-slide__ship { width: 119%; left: -11%; bottom: 11%; }
-  .hero-slide__ship--support { width: 105%; left: -1%; bottom: 8%; }
+  .hero-slide__drums { width: 72%; left: -5%; bottom: 3%; }
   .hero-slide__ship--tanker { width: 118%; left: -10%; bottom: 9%; }
   .solution-row h3 { font-size: 4.7vw; }
   .product-card { grid-template-columns: 34% 1fr; }
